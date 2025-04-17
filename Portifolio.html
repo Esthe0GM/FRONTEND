@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Portfólio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        header {
+            background-color: #2c3e50;
+            color: white;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-around;
+            padding: 1rem;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        
+        nav a:hover {
+            background-color: #34495e;
+        }
+        
+        section {
+            min-height: 100vh;
+            padding: 80px 20px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        h1, h2 {
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        
+        #inicio {
+            background-color: rgb(248, 178, 238);
+            color: rgb(255, 255, 255);
+        }
+        
+        #portfolio {
+            background-color: #f4e4f3;
+        }
+        
+        #contato {
+            background-color: rgb(248, 178, 238);
+            color: white;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin: 20px 0;
+        }
+        
+        .skill {
+            background-color: rgba(255,255,255,0.2);
+            padding: 8px 15px;
+            border-radius: 20px;
+        }
+        
+        .projetos {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            width: 100%;
+            margin-top: 30px;
+        }
+        
+        .projeto {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .projeto:hover {
+            transform: translateY(-5px);
+        }
+        
+        .projeto img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+        
+        .projeto-info {
+            padding: 15px;
+        }
+        
+        form {
+            width: 100%;
+            max-width: 500px;
+            background: rgba(255,255,255,0.2);
+            padding: 30px;
+            border-radius: 10px;
+            backdrop-filter: blur(5px);
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            background-color: rgba(255,255,255,0.9);
+        }
+        
+        button {
+            background-color: white;
+            color: #ffb5e6;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        
+        button:hover {
+            background-color: #000000;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #2c3e50;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#inicio">Início</a>
+            <a href="#portfolio">Portfólio</a>
+            <a href="#contato">Contato</a>
+        </nav>
+    </header>
+
+    <section id="inicio">
+        <div class="container">
+            <h1>Olá, eu sou [Esthefane]</h1>
+            <p>Desenvolvedor Web | Designer UI/UX | Profissional Criativo</p>
+            
+            <div class="skills">
+                <span class="skill">HTML</span>
+                <span class="skill">CSS</span>
+                <span class="skill">JavaScript</span>
+                <span class="skill">React</span>
+                <span class="skill">UI Design</span>
+                <span class="skill">Figma</span>
+            </div>
+            
+            <p>Com mais de [X] anos de experiência na área de desenvolvimento web, sou apaixonado por criar soluções digitais que combinam funcionalidade e design atraente. Minha abordagem centrada no usuário garante que cada projeto atenda não apenas aos requisitos técnicos, mas também proporcione uma excelente experiência ao usuário.</p>
+        </div>
+    </section>
+
+    <section id="portfolio">
+        <div class="container">
+            <h2>Meu Portfólio</h2>
+            <p>Alguns dos meus projetos recentes:</p>
+            
+            <div class="projetos">
+                <div class="projeto">
+                    <img src="https://via.placeholder.com/300x150?text=Projeto+1" alt="Projeto 1">
+                    <div class="projeto-info">
+                        <h3>Site Corporativo</h3>
+                        <p>Website desenvolvido para empresa XYZ com design responsivo.</p>
+                    </div>
+                </div>
+                
+                <div class="projeto">
+                    <img src="https://via.placeholder.com/300x150?text=Projeto+2" alt="Projeto 2">
+                    <div class="projeto-info">
+                        <h3>Aplicativo Mobile</h3>
+                        <p>Design de interface para aplicativo de delivery.</p>
+                    </div>
+                </div>
+                
+                <div class="projeto">
+                    <img src="https://via.placeholder.com/300x150?text=Projeto+3" alt="Projeto 3">
+                    <div class="projeto-info">
+                        <h3>Loja Virtual</h3>
+                        <p>E-commerce completo com integração de pagamentos.</p>
+                    </div>
+                </div>
+                
+                <div class="projeto">
+                    <img src="https://via.placeholder.com/300x150?text=Projeto+4" alt="Projeto 4">
+                    <div class="projeto-info">
+                        <h3>Dashboard Analytics</h3>
+                        <p>Sistema de visualização de dados com gráficos interativos.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato">
+        <div class="container">
+            <h2>Entre em Contato</h2>
+            <p>Estou disponível para novos projetos e oportunidades. Envie uma mensagem!</p>
+            
+            <form>
+                <div class="form-group">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="mensagem">Mensagem:</label>
+                    <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+                </div>
+                
+                <button type="submit">Enviar Mensagem</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 [Esthefane Belem Macedo Gomes]. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
